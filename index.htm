@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>svgMap</title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+
+  <script src="./svg/svg-pan-zoom.min.js"></script>
+
+  <script src="./svg/svgMap.js"></script>
+  
+  <link href="./svg/svgMap.css" rel="stylesheet">
+
+  <script src="./d3/d3.min.js"></script>
+
+  <link href="index.css" rel="stylesheet">
+
+  <script src="./local/countriesEN.js"></script>
+
+  <script src="./data/getData.js"></script>
+  <script src="./data/COVID19svgMap.js"></script>
+  <script src="./data/COVID19LineChart.js"></script>
+
+  </header>
+  <body>
+    <div class="container">
+      <h2>COVID19 vaccienes </h2>
+      <div id="textDiv">
+        <label >
+          <p>In <a id="selectedCountry" class="blackBoldText"> ...... </a> with a population of <a id="populationCount" class="blackBoldText"> 0 </a> up until <a id="dataDate" class="blackBoldText"> ../../.... </a>: </p>
+          <p> The total Number of the People infected with the COVID19 Virus is ( <a id = "totalInfectedCount" class="darkblueText"> 0 </a> ).</p>
+          <p> The total Number of the People recovered from the COVID19 Virus is ( <a id = "totalRecoveredCount" class="darkgreenText"> 0 </a> ).</p>
+          <p> The total Number of the People died from the COVID19 Virus is ( <a id = "totalDeathsCount" class="darkredText"> 0 </a> ).</p>
+          <p> The administered Vaccienes are ( <a id = "totalAdministeredVaccienes" class="darkVioletText"> 0 </a> ).</p>
+          <p> ( <a id = "totalVaccinated" class="darkVioletText"> 0 </a> ) People were vaccinated.</p>
+          <p> ( <a id = "totalPartiallyVaccinated" class="darkVioletText"> 0 </a> ) People were partially vaccinated.</p>
+        </label>
+      </div>
+      <div id="COVID19svgMap"></div>
+    </div><br>
+    <div class="container">
+      <div id="countriesSelectorDiv">
+        <label> Select a country: 
+          <select id="countriesSelector" name="countriesSelector" style="width: 200px;">
+          </select>
+        </label><br>
+      </div>
+      <div id="linePlot">
+      </div>
+    </div>
+    <div id="loadingData">
+      <div id="loader" class="loader"></div>
+    </div>
+  </body>
+  <script src="index.js"></script>
+</html>

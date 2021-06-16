@@ -1,0 +1,120 @@
+body {
+  font-family: sans-serif;
+  color: #000;
+  background: rgba(148, 33, 33, 0.507);
+  padding: 0;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.container {
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0px;
+  padding: 20px 20px 20px 20px;
+}
+
+h2 {
+  text-align: center;
+  font-size: 32px;
+  margin: 0 0 10px;
+  color: whitesmoke;
+  font-weight: bold;
+}
+
+#textDiv{
+  background: whitesmoke;
+  height: 380px;
+  width: calc(50% - 40px);
+  margin: 20px 20px 0px 20px;
+  padding: 10px 10px 10px 10px;
+}
+
+#COVID19svgMap{
+  width: 800px;
+  margin: -400px 20px 20px calc(50% + 20px);
+  padding: 0 0 0 0;
+}
+
+#countriesSelectorDiv{
+  background: whitesmoke;
+  height: 385px;
+  width: calc(50% - 40px);
+  margin: -50px 20px 0px 20px;
+  padding: 10px 10px 10px 10px;
+}
+
+#linePlot{
+  box-sizing: border-box;
+  background: whitesmoke;
+  width: 800px;
+  margin: -405px 20px 20px calc(50% + 20px);
+  padding: 0 0 0 0;
+}
+
+.blackBoldText{
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.darkblueText{
+  font-size: 18px;
+  font-weight: bold;
+  color: darkblue;
+}
+
+.darkgreenText{
+  font-size: 18px;
+  font-weight: bold;
+  color: darkgreen;
+}
+
+.darkredText{
+  font-size: 18px;
+  font-weight: bold;
+  color: darkred;
+}
+
+.darkVioletText{
+  font-size: 18px;
+  font-weight: bold;
+  color: darkviolet;
+}
+
+#loadingData {
+  background:#000;
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  display: none;
+  z-index:1000;
+  filter: alpha(opacity=100);
+  opacity:1;
+  -moz-opacity:1;
+}
+
+.loader {
+  border-top: 50px solid blue;
+  border-right: 50px solid rgba(255, 255, 255, 0);
+  border-bottom: 50px solid red;
+  border-left: 50px solid rgba(253, 253, 253, 0);
+  border-radius: 50%;
+  position: absolute;
+  top: calc(50% - 90px);
+  left: calc(50% - 90px);
+  width: 100px;
+  height: 100px;
+  filter: alpha(opacity=100);
+  opacity:1;
+  -moz-opacity:1;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
